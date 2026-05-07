@@ -19,3 +19,9 @@
 .app-content p {
   color: var(--color-text-secondary);
 }
+
+.summary-grid {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
