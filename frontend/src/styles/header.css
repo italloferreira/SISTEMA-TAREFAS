@@ -1,0 +1,32 @@
+.header {
+  width: 100%;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xl);
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: var(--font-bold);
+  color: var(--color-text-main);
+}
+
+.new-task-button {
+  height: 44px;
+  padding: 0 var(--spacing-md);
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary);
+  color: var(--color-text-main);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 14px;
+  font-weight: var(--font-medium);
+  transition: 0.2s ease;
+}
+
+.new-task-button:hover {
+  background-color: var(--color-primary-hover);
+}

@@ -1,4 +1,5 @@
 import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
 import "./styles/app.css";
 
 function App() {
@@ -7,8 +8,11 @@ function App() {
       <Sidebar />
 
       <main className="app-content">
-        <h1>Área principal</h1>
-        <p>Depois vamos construir essa parte.</p>
+        <Header />
+
+        <section>
+          <p>Depois vamos colocar os cards e a lista de tarefas aqui.</p>
+        </section>
       </main>
     </div>
   );
