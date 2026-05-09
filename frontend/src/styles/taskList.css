@@ -1,0 +1,109 @@
+.task-list-card {
+  width: 100%;
+  max-width: 900px;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.task-list-card h2 {
+  font-size: 20px;
+  font-weight: var(--font-bold);
+  color: var(--color-text-main);
+  margin-bottom: var(--spacing-lg);
+}
+
+.task-list-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 0 var(--spacing-sm) var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  font-weight: var(--font-medium);
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.task-row:last-child {
+  border-bottom: none;
+}
+
+.task-row:hover {
+  background-color: var(--color-bg-card-hover);
+  border-radius: var(--radius-md);
+}
+
+.task-name {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  color: var(--color-text-main);
+  font-size: 15px;
+  font-weight: var(--font-medium);
+}
+
+.task-check {
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--color-text-muted);
+  border-radius: 50%;
+  background-color: transparent;
+  flex-shrink: 0;
+}
+
+.task-check:hover {
+  border-color: var(--color-primary-light);
+}
+
+.task-category {
+  width: fit-content;
+  padding: 6px 10px;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  color: var(--color-primary-light);
+  font-size: 13px;
+  font-weight: var(--font-medium);
+}
+
+.task-status {
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: var(--font-medium);
+  color: var(--color-text-main);
+}
+
+.task-status.pending {
+  background-color: var(--color-status-pending-bg);
+}
+
+.task-status.progress {
+  background-color: var(--color-status-progress-bg);
+}
+
+.task-status.done {
+  background-color: var(--color-status-done-bg);
+}
+
+.task-deadline {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
