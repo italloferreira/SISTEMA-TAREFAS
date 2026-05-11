@@ -1,0 +1,132 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: var(--spacing-lg);
+}
+
+.task-modal {
+  width: 100%;
+  max-width: 520px;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.task-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-lg);
+}
+
+.task-modal-header h2 {
+  font-size: 22px;
+  font-weight: var(--font-bold);
+  color: var(--color-text-main);
+}
+
+.modal-close-button {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-card-hover);
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease;
+}
+
+.modal-close-button:hover {
+  color: var(--color-text-main);
+  background-color: var(--color-border);
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: var(--font-medium);
+  color: var(--color-text-secondary);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 44px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  padding: 0 var(--spacing-md);
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--color-primary);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.cancel-button,
+.save-button {
+  height: 42px;
+  padding: 0 var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: var(--font-medium);
+  transition: 0.2s ease;
+}
+
+.cancel-button {
+  background-color: var(--color-bg-card-hover);
+  color: var(--color-text-secondary);
+}
+
+.cancel-button:hover {
+  color: var(--color-text-main);
+  background-color: var(--color-border);
+}
+
+.save-button {
+  background-color: var(--color-primary);
+  color: var(--color-text-main);
+}
+
+.save-button:hover {
+  background-color: var(--color-primary-hover);
+}

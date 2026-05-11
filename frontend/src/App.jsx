@@ -5,11 +5,14 @@ import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import SummaryCard from "./components/SummaryCard";
 import TaskList from "./components/TaskList";
+import TaskFormModal from "./components/TaskFormModal";
 
 import "./styles/app.css";
 
 function App() {
-  const [tasks] = useState([
+  const [isTaskModalOpen, setIsTaskModalOpen] = useState(false);
+
+  const [tasks, setTasks] = useState([
     {
       id: 1,
       title: "Estudar React",
@@ -50,12 +53,24 @@ function App() {
   const pendingTasks = tasks.filter((task) => task.status !== "Concluída").length;
   const completedTasks = tasks.filter((task) => task.status === "Concluída").length;
 
+  function handleOpenTaskModal() {
+    setIsTaskModalOpen(true);
+  }
+
+  function handleCloseTaskModal() {
+    setIsTaskModalOpen(false);
+  }
+
+  function handleAddTask(newTask) {
+    setTasks((currentTasks) => [newTask, ...currentTasks]);
+  }
+
   return (
     <div className="app">
       <Sidebar />
 
       <main className="app-content">
-        <Header />
+        <Header onOpenTaskModal={handleOpenTaskModal} />
 
         <section className="summary-grid">
           <SummaryCard
@@ -73,6 +88,12 @@ function App() {
 
         <TaskList tasks={tasks} />
       </main>
+
+      <TaskFormModal
+        isOpen={isTaskModalOpen}
+        onClose={handleCloseTaskModal}
+        onAddTask={handleAddTask}
+      />
     </div>
   );
 }
