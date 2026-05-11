@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ClipboardList, CheckCircle } from "lucide-react";
 
 import Sidebar from "./components/Sidebar";
@@ -8,6 +9,47 @@ import TaskList from "./components/TaskList";
 import "./styles/app.css";
 
 function App() {
+  const [tasks] = useState([
+    {
+      id: 1,
+      title: "Estudar React",
+      category: "Estudos",
+      status: "Em andamento",
+      deadline: "24 mai",
+    },
+    {
+      id: 2,
+      title: "Finalizar atividade de API",
+      category: "Projeto pessoal",
+      status: "Pendente",
+      deadline: "26 mai",
+    },
+    {
+      id: 3,
+      title: "Organizar rotina da semana",
+      category: "Pessoal",
+      status: "Pendente",
+      deadline: "27 mai",
+    },
+    {
+      id: 4,
+      title: "Revisar código do projeto",
+      category: "Projeto pessoal",
+      status: "Em andamento",
+      deadline: "28 mai",
+    },
+    {
+      id: 5,
+      title: "Ler capítulo do livro",
+      category: "Estudos",
+      status: "Concluída",
+      deadline: "30 mai",
+    },
+  ]);
+
+  const pendingTasks = tasks.filter((task) => task.status !== "Concluída").length;
+  const completedTasks = tasks.filter((task) => task.status === "Concluída").length;
+
   return (
     <div className="app">
       <Sidebar />
@@ -16,11 +58,20 @@ function App() {
         <Header />
 
         <section className="summary-grid">
-          <SummaryCard title="Pendentes" value="0" icon={ClipboardList} />
-          <SummaryCard title="Concluídas" value="0" icon={CheckCircle} />
+          <SummaryCard
+            title="Pendentes"
+            value={pendingTasks}
+            icon={ClipboardList}
+          />
+
+          <SummaryCard
+            title="Concluídas"
+            value={completedTasks}
+            icon={CheckCircle}
+          />
         </section>
 
-        <TaskList />
+        <TaskList tasks={tasks} />
       </main>
     </div>
   );

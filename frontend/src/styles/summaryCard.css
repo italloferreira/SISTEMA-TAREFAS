@@ -12,25 +12,32 @@
 }
 
 .summary-card-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-md);
-  background-color: var(--color-primary-dark);
-  color: var(--color-primary-light);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-text-main);
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
-.summary-card strong {
-  display: block;
-  font-size: 28px;
+.summary-card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-card-info strong {
+  font-size: 32px;
+  line-height: 1;
   font-weight: var(--font-bold);
   color: var(--color-text-main);
-  margin-bottom: 4px;
+  margin-bottom: var(--spacing-sm);
 }
 
-.summary-card span {
-  font-size: 14px;
+.summary-card-info span {
+  font-size: 15px;
+  font-weight: var(--font-regular);
   color: var(--color-text-secondary);
 }

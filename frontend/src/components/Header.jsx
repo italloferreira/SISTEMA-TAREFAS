@@ -6,7 +6,7 @@ function Header() {
     <header className="header">
       <h1>Minhas tarefas</h1>
 
-      <button className="new-task-button">
+      <button type="button" className="new-task-button">
         <Plus size={18} />
         Nova tarefa
       </button>

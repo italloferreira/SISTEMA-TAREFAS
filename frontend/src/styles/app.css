@@ -9,19 +9,9 @@
   padding: var(--spacing-xl);
 }
 
-.app-content h1 {
-  font-size: 32px;
-  font-weight: var(--font-bold);
-  color: var(--color-text-main);
-  margin-bottom: var(--spacing-sm);
-}
-
-.app-content p {
-  color: var(--color-text-secondary);
-}
-
 .summary-grid {
   display: flex;
   gap: var(--spacing-lg);
   margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
 }

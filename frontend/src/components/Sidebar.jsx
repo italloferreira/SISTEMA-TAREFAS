@@ -50,6 +50,7 @@ function Sidebar() {
 
           return (
             <button
+              type="button"
               key={item.name}
               className={`sidebar-menu-item ${item.active ? "active" : ""}`}
             >

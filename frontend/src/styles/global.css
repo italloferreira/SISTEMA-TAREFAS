@@ -8,24 +8,34 @@
   --font-bold: 700;
 
   /* Fundos */
-  --color-bg-main: #09090B;
-  --color-bg-sidebar: #0F0F13;
-  --color-bg-card: #15151C;
-  --color-bg-card-hover: #1B1B24;
+  --color-bg-main: #09090b;
+  --color-bg-sidebar: #0f0f13;
+  --color-bg-card: #15151c;
+  --color-bg-card-hover: #1b1b24;
 
   /* Bordas */
-  --color-border: #2A2A35;
+  --color-border: #2a2a35;
 
   /* Roxos */
-  --color-primary: #7C3AED;
-  --color-primary-hover: #6D28D9;
-  --color-primary-light: #A78BFA;
-  --color-primary-dark: #4C1D95;
+  --color-primary: #7c3aed;
+  --color-primary-hover: #6d28d9;
+  --color-primary-light: #a78bfa;
+  --color-primary-dark: #4c1d95;
 
   /* Textos */
-  --color-text-main: #F5F5F7;
-  --color-text-secondary: #A1A1AA;
-  --color-text-muted: #71717A;
+  --color-text-main: #f5f5f7;
+  --color-text-secondary: #a1a1aa;
+  --color-text-muted: #71717a;
+
+  /* Status */
+  --color-status-pending-bg: #27272a;
+  --color-status-progress-bg: #312e81;
+  --color-status-done-bg: #064e3b;
+
+  /* Prioridades */
+  --color-priority-high: #7f1d1d;
+  --color-priority-medium: #713f12;
+  --color-priority-low: #1e3a8a;
 
   /* Espaçamentos */
   --spacing-xs: 4px;
@@ -34,7 +44,7 @@
   --spacing-lg: 24px;
   --spacing-xl: 32px;
 
-  /* Bordas arredondadas */
+  /* Bordas */
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 16px;
